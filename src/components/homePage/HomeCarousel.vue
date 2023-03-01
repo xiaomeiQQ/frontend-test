@@ -1,7 +1,7 @@
 <template>
     <section class="carousel">
         <!-- 背景圖 -->
-        <img class="bgImg" :src="require(`@/assets/image/case_${this.current}.jpg`)" alt="backgroundImg">
+        <img class="bgImg opacity" :src="require(`@/assets/image/case_${this.current}.svg`)" alt="backgroundImg">
         <div class="carousel_box">
             <!-- 順序 -->
             <div class="caseNumber">
@@ -12,9 +12,9 @@
             <div v-show="this.current==i.id" v-for="i in cases" :key="i" class="case_wrap">
                 <div class="case_box">
                     <div class="left">
-                        <div class="img_box">
+                        <!-- <div class="img_box"> -->
                             <img :src="require(`@/assets/image/${i.img}`)" :alt="i.title">
-                        </div>
+                        <!-- </div> -->
                         <btn class="btn" btn="VIEW PROJECT"/>
                     </div>
                     <div class="right">
@@ -48,7 +48,7 @@ export default{
         return {
             cases:carouselCase,
             current:1,
-            auto:null
+            auto:null,
         }
     },
     created() {
@@ -70,11 +70,10 @@ export default{
         next(){
             if(this.current>=this.cases.length){
                 this.current=1;
-                this.opacity();
-                this.$refs.bg.style.animation='opacity 3s forwards'
             }else{
                 this.current++;
             }
+
         },
         before(){
             if(this.current<=1){
@@ -88,29 +87,33 @@ export default{
 </script>
 
 <style lang="scss" scoped>
+
 .opacity{
-    animation: opacity 3s forwards;
+    animation: opacity 4s infinite;
+}
+@keyframes opacity {
+    from{
+        opacity: 0.5;
+        transform: scale(1.4);
+    }to{
+        opacity: 1;
+        transform: scale(1.1);
+    }
 }
 .carousel{
     position: relative;
     top: -50px;
     overflow: hidden;
     border-radius:0 0 40px 40px;
+    @include s{
+        top: 0;
+    }
     .bgImg{
             z-index: -10;
             position: absolute;
-            width: 100%;
-            height: 100%;
+            min-width: 100%;
             filter: blur(10px);
             
-        }
-        @keyframes opacity {
-            from{
-                opacity: 0.5;
-                transform: scale(1.4);
-            }to{
-                opacity: 1;
-            }
         }
     .carousel_box{
         display: flex;
@@ -121,17 +124,33 @@ export default{
             height: 900px;
             // position: absolute;
             position: relative;
-            // overflow: hidden;-----
+            // overflow: hidden;
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
             display: flex;
             justify-content: center;
             align-items: center;
+            @include m{
+                height: 700px;
+            }
+            @include s{
+                height: 650px;
+            }
             .case_box{
                 width: 100vw;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 5%;
+                @include xl{
+                    gap: 8%;
+                }
+                @include l{
+                    flex-direction: column;
+                    gap: 50px;
+                }
+                @include s{
+                    gap: 20px;
+                }
                 .left{
                     position: relative;
                     .img_box{
@@ -144,11 +163,27 @@ export default{
                         width: fit-content;
                         height: 540px;
                         object-fit: cover;
+                        border-radius: 40px;
+                        @include xl{
+                            width: 360px;
+                            height: 100%;
+                        }
+                        @include l{
+                            width: 300px;
+                        }
+                        @include s{
+                            width: 230px;
+                        }
                     }
                     .btn{
                         position: absolute;
                         bottom: -40px;
                         right: -50px;
+                        @include s{
+                            bottom: -150px;
+                            right: 0;
+                            left: 0;
+                        }
                     }
                 }
                 .right{
@@ -157,10 +192,28 @@ export default{
                     flex-direction: column;
                     gap: 20px;
                     color: white;
+                    @include xl{
+                        gap: 10px;
+                    }
+                    @include l{
+                        width: 55%;
+                    }
+                    @include s{
+                        width: 60%;
+                        gap: 5px;
+                        align-items: center;
+                    }
                     h3{
                         font-size: 16px;
                         font-weight: 700;
                         letter-spacing: 2.22px;
+                        @include l{
+                            font-size: 14px;
+                        }
+                        @include s{
+                            font-size: 12px;
+                            text-align: center;
+                        }
                     }
                     h4{
                         cursor: pointer;
@@ -172,6 +225,14 @@ export default{
                         margin-bottom: 15px;
                         position: relative;
                         z-index: 10;
+                        @include l{
+                            font-size: 24px;
+                            line-height: normal;
+                        }
+                        @include s{
+                            font-size: 16px;
+                            text-align: center;
+                        }
                         &::before{
                             content: '';
                             position: absolute;
@@ -181,6 +242,9 @@ export default{
                             height: 10px;
                             background-color: $second_color;
                             border-radius: 50%;
+                            @include xl{
+                                display: none;
+                            }
                         }
                         &::after{
                             content: '';
@@ -191,6 +255,9 @@ export default{
                             width: 105%;
                             height: 5px;
                             background-color: $main_color;
+                            @include xl{
+                                display: none;
+                            }
                         }
                     }
                     p{
@@ -199,6 +266,13 @@ export default{
                         font-weight: 400;
                         letter-spacing: 1px;
                         line-height: 24px;
+                        @include l{
+                            font-size: 14px;
+                            line-height: 18px;
+                        }
+                        @include m{
+                            display: none;
+                        }
                     }
                 }
             }
@@ -245,7 +319,9 @@ export default{
             position: absolute;
             top: 450px;
             border-radius: 50%;
-           
+            @include s{
+                width: 8%;
+            }
             &:first-child{
                 left: 6.5%;
                 &:hover{

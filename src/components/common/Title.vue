@@ -30,6 +30,12 @@ export default{
         font-weight: 700;
         letter-spacing: 3.64px;
         margin-bottom: 10px;
+        @include m{
+            font-size: 24px;
+        }
+        @include s{
+            font-size: 18px;
+        }
     }
     &::after{
         content: '';
@@ -41,6 +47,35 @@ export default{
         height: 10px;
         border-radius: 50%;
         background-color: $second_color;
+        @include m{
+            width: 8.5px;
+            height: 8.5px;
+            right: -8%;
+            bottom: 35%;
+        }
+        @include s{
+            width: 7px;
+            height: 7px;
+            right: -7%;
+        }
     }
+    img{
+        @include m{
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 110%;
+        }
+        @include s{
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 120%;
+        }
+    }
+    
+    
 }
 </style>

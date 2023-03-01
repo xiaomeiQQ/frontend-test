@@ -55,20 +55,33 @@ export default {
     position: relative;
     .award_box{
         position: absolute;
-        max-width: 85%;
+        max-width: 82%;
         right: 0;
         background-color: white;
-        padding: 60px;
+        padding: 4.5% 5%;
         display: flex;
         border-radius: 40px 0 40px 40px;
-        gap: 8%;
+        gap: 5%;
+        @include xl{
+            width: auto;
+            padding: 50px;
+            gap: 20px;
+            flex-direction: column;
+        }
+        @include l{
+            max-width: 100%;
+        }
         .award_intro{
-            width: 47%;
+            width: 33%;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
             gap: 35px;
+            @include xl{
+                width: 100%;
+                gap: 20px;
+            }
             p{
                 font-size: 16px;
                 color: $text_black;
@@ -76,11 +89,37 @@ export default {
                 letter-spacing: 1px;
                 line-height: 28px;
                 text-align: left;
+                @include l{
+                    font-size: 14px;
+                }
+                @include m{
+                    font-size: 12px;
+                    line-height: 20px;
+                }
             }
         }
         .award_img{
+            width: 700px;
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: center;
+            @include xl{
+                width: auto;
+            }
+            img{
+                max-width:100%;
+                @include xl{
+                    width: 25%;
+                }
+                @include m{
+                    width: 35%;
+                }
+                @include s{
+                    width: 50%;
+                }
+            }
         }
     }
 

@@ -34,4 +34,12 @@ html {
     font-weight: 400;
     text-align: center;
     letter-spacing: 1px;
+    padding: 0 30px;
+    @include l{
+        font-size: 14px;
+    }
+    @include m{
+        font-size: 12px;
+        line-height: 20px;
+    }
 }

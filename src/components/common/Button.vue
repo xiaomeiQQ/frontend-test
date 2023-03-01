@@ -33,6 +33,17 @@ button{
         width: 52px;
         height: 2px;
         background-color: white;
+        @include s{
+            display: none;
+        }
+    }
+    @include m{
+        padding: 20px 15px;
+        font-size: 14px;
+    }
+    @include s{
+        padding: 15px 10px;
+        font-size: 12px;
     }
 }
 </style>

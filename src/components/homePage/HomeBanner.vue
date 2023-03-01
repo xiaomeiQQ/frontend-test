@@ -99,6 +99,9 @@ export default {
                 height: 2px;
                 background-color: white;
             }
+            @include xl{
+                display: none;
+            }
         }
         .banner_content{
             position: absolute;
@@ -107,10 +110,19 @@ export default {
             top: 20%;
             left: 10%;
             gap: 50px;
+            @include s{
+                gap: 40px;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
             img{
                 width: fit-content;
                 cursor: pointer;
                 animation: scale 1s linear;
+                @include s{
+                    align-self: center;
+                }
             }
             @keyframes scale{
                 0%{transform: scale(1.2);}
@@ -152,6 +164,23 @@ export default {
                     width: 580px;
                     height: 8px;
                     background-color: $main_color;
+                    @include m{
+                        display: none;
+                    }
+                }
+                @include m{
+                    font-size: 30px;
+                }
+                @include s{
+                    font-size: 24px;
+                    text-align: center;
+                    gap: 0;
+                }
+                &:last-child>span{
+                    @include s{
+                        // margin-top: -30px;
+                        line-height: 40px;
+                    }
                 }
             }
             &::after{
@@ -163,6 +192,9 @@ export default {
                 height: 10px;
                 border-radius: 50%;
                 background-color: $second_color;
+                @include m{
+                    display: none;
+                }
             }
         }
         .salad_img{
@@ -186,11 +218,11 @@ export default {
                 }
             }
             &:hover~.fork{
-                left: 47%;
+                // left: 47%;
                 animation: fork 1.5s ease infinite;
             }
             &:hover~.knife{
-                left: 52%;
+                // left: 52%;
                 bottom: 12.5%;
                 animation: knife 1.5s ease infinite;
             }
@@ -204,9 +236,15 @@ export default {
             left: 47%;
             bottom: 13%;
             transform: scale(3);
-            &:hover{
-                left: 47%;
-                animation: fork 1.5s ease infinite;
+            // &:hover{
+            //     left: 47%;
+            //     animation: fork 1.5s ease infinite;
+            // }
+            @include l{
+                left: 46%;
+            }
+            @include m{
+                display: none;
             }
         }
         .knife{
@@ -215,10 +253,16 @@ export default {
             left: 52.5%;
             bottom: 13%;
             transform: scale(3);
-            &:hover{
-                left: 52%;
-                bottom: 12.5%;
-                animation: knife 1.5s ease infinite;
+            // &:hover{
+            //     left: 52%;
+            //     bottom: 12.5%;
+            //     animation: knife 1.5s ease infinite;
+            // }
+            @include l{
+                left: 53.5%;
+            }
+            @include m{
+                display: none;
             }
         }
         @keyframes fork{

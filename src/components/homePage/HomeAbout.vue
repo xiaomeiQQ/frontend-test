@@ -48,9 +48,8 @@ export default {
     },
     methods: {
         videoActive(){
-            const video=document.getElementById('video');
+            const video=document.getElementById('video')
             const play=document.getElementById('play')
-            const pause=document.getElementById('pause')
             if(!this.$store.state.videoActive){
                 video.play();
                 play.style.display='none';
@@ -79,6 +78,13 @@ export default {
     align-items: center;
     gap: 50px;
     background-color: $bg_color;
+    @include m{
+        gap: 30px;
+        height: 1000px;
+    }
+    @include s{
+        height: 900px;
+    }
     &::before{
         content: '';
         position: absolute;
@@ -93,7 +99,11 @@ export default {
         display: flex;
         flex-direction: column;
         gap: 40px;
+        @include m{
+            gap: 30px;
+        }
         .video_box{
+            width: 100%;
             display: flex;
             flex-direction: column;
             position: relative;
@@ -101,12 +111,25 @@ export default {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
+                @include m{
+                    width: 15%;
+                }
+                @include s{
+                    width: 10%;
+                }
             }
             &>:last-child{
                 width: 70px;
                 border-radius: 50%;
                 bottom: 5%;
-                left: 40px;
+                left: 5%;
+                @include m{
+                    width: 8%;
+
+                }
+                @include s{
+                    width: 6%;
+                }
             }
             img{
                 cursor: pointer;
@@ -117,8 +140,8 @@ export default {
                 }
             }
             video{
-                max-width: 960px;
-                height: 544px;
+                width: 100%;
+                // height: 544px;
                 object-fit: cover;
                 margin: auto;
             }
@@ -129,6 +152,7 @@ export default {
         .shadow{
             box-shadow: 1px 1px 10px 1px #808080;
         }
+        
     }
 }
 </style>

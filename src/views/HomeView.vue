@@ -11,7 +11,7 @@
 
 <script>
 
-import HomeMenu from '@/components/homePage/HomeMenu.vue'
+import HomeMenu from '@/components/HomeMenu.vue'
 import HomeBanner from '@/components/homePage/HomeBanner.vue'
 import HomeAbout from '@/components/homePage/HomeAbout.vue'
 import HomeAward from '@/components/homePage/HomeAward.vue'

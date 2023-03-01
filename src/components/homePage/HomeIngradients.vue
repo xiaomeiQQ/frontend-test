@@ -66,6 +66,9 @@ export default {
     justify-content: center;
     align-items: center;
     gap: 50px;
+    @include m{
+        gap: 30px;
+    }
     .ingradients_intro{
         display: flex;
         flex-direction: column;
@@ -85,6 +88,9 @@ export default {
         font-weight: 700;
         z-index: 1;
         cursor: pointer;
+        @include m{
+            font-size: 14px;
+        }
         &::after{
             content: '';
             position: absolute;
@@ -95,6 +101,10 @@ export default {
             z-index: -1;
             transform: translate(-50%,-50%);
             background-color: $forth_color;
+            @include m{
+                width: 340px;
+                bottom: -15%;
+            }
         }
     }
 }

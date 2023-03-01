@@ -2,9 +2,7 @@
     <div class="card">
         <div class="card_box" v-for="card in cards" :key="card">
             <!-- 圖 -->
-            <div class="img_box">
-                <img :src="require(`@/assets/image/Ingradients_${card.img}.svg`)" :alt="card.title">
-            </div>
+            <img :src="require(`@/assets/image/Ingradients_${card.img}.svg`)" :alt="card.title">
             <!-- 文字 -->
             <h3>{{ card.title }}</h3>
             <p class="text">Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis
@@ -55,12 +53,24 @@ export default {
         align-items: center;
         width: 345px;
         gap: 20px;
+        @include m{
+            width: 200px;
+            gap: 10px;
+        }
+        img{
+            @include m{
+                width: 25%;
+            }
+        }
         h3{
             font-size: 20px;
             font-weight: 700;
             letter-spacing: 2px;
             text-align: center;
             color: white;
+            @include m{
+                font-size: 16px;
+            }
         }
         .text {
             font-size: 16px;
@@ -69,6 +79,11 @@ export default {
             text-align: center;
             color: white;
             line-height: 28px;
+            @include m{
+                font-size: 12px;
+                line-height: 16px;
+
+            }
         }
         button{
             color: white;
@@ -80,7 +95,10 @@ export default {
             font-weight: 700;
             letter-spacing: 2.22px;
             background-color: transparent;
-
+            @include m{
+                padding: 8px 15px;
+                font-size: 12px;
+            }
         }
     }
 }

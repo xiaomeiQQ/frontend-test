@@ -63,10 +63,22 @@ export default {
         background-size: cover;
         background-attachment: fixed;
         border-radius: 0 40px 40px 40px;
-        padding: 110px 30px 30px 160px;
+        padding: 7% 7% 3% 7%;
         display: flex;
+        @include xl{
+            padding: 5%;
+        }
+        @include l{
+            max-width: 100%;
+        }
+        @include s{
+            height: 350px;
+        }
         .quote_wrap{
             display: flex;
+            @include xl{
+                flex-direction: column-reverse;
+            }
             .founder_intro{
                 display: flex;
                 flex-direction: column;
@@ -74,8 +86,16 @@ export default {
                 align-items: center;
                 gap: 10px;
                 margin-bottom: 50px;
+                @include xl{
+                    margin-bottom: 0;
+                }
                 img{
+                    max-width: 100%;
                     margin-bottom: 20px;
+                    @include xl{
+                        width: 15%;
+                        margin-bottom: 10px;
+                    }
                 }
                 h3{
                     color: white;
@@ -83,6 +103,9 @@ export default {
                     font-weight: 700;
                     letter-spacing: 2px;
                     text-align: center;
+                    @include s{
+                        font-size: 16px;
+                    }
                 }
                 p{
                     font-size: 16px;
@@ -91,17 +114,30 @@ export default {
                     letter-spacing: 2px;
                     text-align: center;
                     color: white;
+                    @include s{
+                        font-size: 12px;
+                    }
                 }
             }
             .founder_words{
                 margin: auto;
                 width: 62%;
                 position: relative;
+                @include xl{
+                    width: 100%;
+                }
                 img{
                     position: absolute;
                     top: -20%;
                     left: 50%;
                     transform: translate(-50%,-50%);
+                    @include xl{
+                        width: 40px;
+                    }
+                    @include m{
+                        top: -10%;
+                        width: 30px;
+                    }
                 }
                 p{
                     font-size: 22px;
@@ -109,6 +145,17 @@ export default {
                     color: white;
                     letter-spacing: 2px;
                     line-height: 48px;
+                    @include xl{
+                        font-size: 18px;
+                        line-height: 35px;
+                    }
+                    @include m{
+                        font-size: 16px;
+                        line-height: 28px;
+                    }
+                    @include s{
+                        font-size: 12px;
+                    }
                     span{
                         color: $forth_color;
                         font-weight: 700;

@@ -61,13 +61,13 @@ header {
     margin: auto;
     z-index: 100;
     .main_nav{
-        max-width: 1340px;
+        // max-width: 1340px;
         margin: auto;
         height: 100px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 20px;
+        padding: 0 60px;
         .nav_logo{
             z-index: 50;
             cursor: pointer;
@@ -93,6 +93,9 @@ header {
                     background: linear-gradient(90deg, #26D0A8 3.94%, #4EE5EA 94.73%);
                     transition: all .3s ease-in-out;
                     transform: scale(102%);
+                }
+                @include s{
+                    display: none;
                 }
             }
             .nav_control{
