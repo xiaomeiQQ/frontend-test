@@ -1,0 +1,37 @@
+@import "reset";
+@import "mixin";
+$null: null;
+
+// 顏色
+$main_color: #26C6D0;
+$second_color: #EE6C8A;
+$third_color:#585880;
+$forth_color:#FFBC58;
+$bg_color: #F2F2F2;
+$text_black: #262626;
+
+// 字型
+*{
+    font-family: 'Proxima-Nova' !important;
+    ::selection {
+        background-color: $main_color;
+    }
+}
+body{
+    background-color: $bg_color;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+// 假文範例
+.lorem{
+    max-width: 960px;
+    margin: auto;
+    font-size: 16px;
+    color: $text_black;
+    line-height: 28px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1px;
+}

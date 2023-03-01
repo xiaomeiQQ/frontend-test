@@ -1,0 +1,38 @@
+<template>
+    <button>
+        {{btn}}
+        <!-- 裝飾 -->
+        <span></span>
+    </button>
+</template>
+<script>
+export default{
+    name:'main_button',
+    props:{
+        btn:String,
+    },
+}
+</script>
+
+<style lang="scss" scoped>
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 35px 30px;
+    background-color: $main_color;
+    color: white;
+    border: none;
+    margin: auto;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2.22px;
+    cursor: pointer;
+    span{
+        width: 52px;
+        height: 2px;
+        background-color: white;
+    }
+}
+</style>

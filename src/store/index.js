@@ -1,14 +1,18 @@
 import { createStore } from 'vuex'
 
 export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+    state: {
+        navActive: false,
+        videoActive: false,
+        headerColor:false,
+        // ref:'section',
+    },
+    getters: {
+    },
+    mutations: { 
+    },
+    actions: {
+    },
+    modules: {
+    }
 })
