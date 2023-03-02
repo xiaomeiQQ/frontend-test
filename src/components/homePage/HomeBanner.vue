@@ -146,6 +146,37 @@ export default {
                 letter-spacing: 9.17px;
                 font-weight: 700;
                 color: white;
+                span:first-child{
+                    animation: opacity1 0.5s ease-in-out;
+                }
+                span:nth-child(2){
+                    animation: opacity2 0.8s ease-in-out;
+                }
+                span:last-child{
+                    animation: opacity3 1.4s ease-in-out;
+                }
+                
+                @keyframes opacity1 {
+                    from{
+                        transform: translateX(-10%) translateY(5%) scale(0.6);
+                    }to{
+                        transform: scale(1);
+                    }
+                }
+                @keyframes opacity2 {
+                    from{
+                        transform: translateX(-10%) translateY(5%) scale(0.6);
+                    }to{
+                        transform: scale(1);
+                    }
+                }
+                @keyframes opacity3 {
+                    from{
+                        transform: translateX(-5%) translateY(5%) scale(0.6);
+                    }to{
+                        transform: scale(1);
+                    }
+                }
                 &::after{
                     content: '';
                     position: absolute;
