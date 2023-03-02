@@ -5,7 +5,7 @@
         <!-- 影片 -->
         <div class="video_card">
             <div class="video_box">
-                <video src="../../assets/video/DigiSalad為您創造驚喜的用戶體驗.mp4" poster="../../assets/image/about_digiSalad_video.svg" id="video"></video>
+                <video id="video" src="../../assets/video/DigiSalad為您創造驚喜的用戶體驗.mp4" poster="../../assets/image/about_digiSalad_video.svg"></video>
                 <img id="play" src="../../assets/image/play_btn.svg" @click="videoActive()" alt="video play button">
                 <img id="pause" v-show="this.$store.state.videoActive" src="../../assets/image/pause_btn.svg" @click="videoActive()" alt="video pause button">
             </div>
@@ -63,7 +63,6 @@ export default {
                 play.classList.add('shadow');
             }
         },
-        
     }
 }
 </script>
@@ -125,7 +124,6 @@ export default {
                 left: 5%;
                 @include m{
                     width: 8%;
-
                 }
                 @include s{
                     width: 6%;
@@ -152,7 +150,6 @@ export default {
         .shadow{
             box-shadow: 1px 1px 10px 1px #808080;
         }
-        
     }
 }
 </style>

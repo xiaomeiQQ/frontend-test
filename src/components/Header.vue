@@ -10,7 +10,7 @@
                 <button class="nav_btn" v-show="!this.$store.state.navActive">START YOUR PROJECT</button>
                 <!-- 漢堡 -->
                 <div class="nav_control" @click="navChange()">
-                    <span :style="{backgroundColor : this.$store.state.headerColor&!this.$store.state.navActive ? '#585880':'white'}" :class="{'nav_rotate':this.$store.state.navActive}" v-for="i in 3" :key="i"></span>
+                    <span :class="{'nav_rotate':this.$store.state.navActive}" :style="{backgroundColor : this.$store.state.headerColor&!this.$store.state.navActive ? '#585880':'white'}" v-for="i in 3" :key="i"></span>
                 </div>
             </div>
         </div>
@@ -61,7 +61,6 @@ header {
     margin: auto;
     z-index: 100;
     .main_nav{
-        // max-width: 1340px;
         margin: auto;
         height: 100px;
         display: flex;
@@ -157,8 +156,7 @@ header {
     .nav_control{
         span{
         background-color: #585880;
+        }
     }
-    }
-    
 }
 </style>

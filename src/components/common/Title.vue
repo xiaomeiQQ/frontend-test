@@ -24,7 +24,6 @@ export default{
 .title{
     text-align: center;
     position: relative;
-    
     h2{
         font-size: 28px;
         font-weight: 700;
@@ -75,7 +74,5 @@ export default{
             width: 120%;
         }
     }
-    
-    
 }
 </style>

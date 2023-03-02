@@ -9,12 +9,10 @@
                 <p class="number">0{{ this.cases.length }}</p>
             </div>
             <!-- 輪播圖 -->
-            <div v-show="this.current==i.id" v-for="i in cases" :key="i" class="case_wrap">
+            <div class="case_wrap" v-show="this.current==i.id" v-for="i in cases" :key="i">
                 <div class="case_box">
                     <div class="left">
-                        <!-- <div class="img_box"> -->
-                            <img :src="require(`@/assets/image/${i.img}`)" :alt="i.title">
-                        <!-- </div> -->
+                        <img :src="require(`@/assets/image/${i.img}`)" :alt="i.title">
                         <btn class="btn" btn="VIEW PROJECT"/>
                     </div>
                     <div class="right">
@@ -56,7 +54,6 @@ export default{
     },
     mounted() {
         this.autoSlide();
-
     },
     computed: {
 
@@ -73,7 +70,6 @@ export default{
             }else{
                 this.current++;
             }
-
         },
         before(){
             if(this.current<=1){
@@ -113,12 +109,10 @@ export default{
             position: absolute;
             min-width: 100%;
             filter: blur(10px);
-            
         }
     .carousel_box{
         display: flex;
         overflow: hidden;
-        
         .case_wrap{
             width: 100%;
             height: 900px;
@@ -153,11 +147,6 @@ export default{
                 }
                 .left{
                     position: relative;
-                    .img_box{
-                        max-width: 540px;
-                        border-radius: 40px;
-                        overflow: hidden;
-                    }
                     img{
                         cursor: pointer;
                         width: fit-content;
@@ -340,6 +329,4 @@ export default{
         }
     }
 }
-
-
 </style>

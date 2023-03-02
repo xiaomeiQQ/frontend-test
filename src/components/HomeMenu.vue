@@ -4,14 +4,14 @@
             <!-- 左選項 -->
             <div class="nav_left content_common">
                 <li class="about card">
-                    <img src="../assets/image/nav_left_icon01.svg" alt="">
+                    <img src="../assets/image/nav_left_icon01.svg" alt="digisalad icon">
                     <div class="nav_text">
                         <p>EMPOWERING BRANDS</p>
                         <h3>ABOUT US</h3>
                     </div>
                 </li>
                 <li class="works card">
-                    <img src="../assets/image/nav_left_icon02.svg" alt="">
+                    <img src="../assets/image/nav_left_icon02.svg" alt="digisalad icon">
                     <div class="nav_text">
                         <p>CASE STUDIES</p>
                         <h3>WORKS</h3>
@@ -21,14 +21,14 @@
             <!-- 中選項 -->
             <div class="nav_center content_common">
                 <li class="careers card">
-                    <img src="../assets/image/nav_center_icon01.svg" alt="">
+                    <img src="../assets/image/nav_center_icon01.svg" alt="digisalad icon">
                     <div class="nav_text">
                         <p>BE COOL WITH US</p>
                         <h3>CAREERS</h3>
                     </div>
                 </li>
                 <li class="insights card">
-                    <img src="../assets/image/nav_center_icon02.svg" alt="">
+                    <img src="../assets/image/nav_center_icon02.svg" alt="digisalad icon">
                     <div class="nav_text">
                         <p>OUR STRATEGIES</p>
                         <h3>INSIGHTS</h3>
@@ -38,7 +38,7 @@
             <!-- 右選項 -->
             <div class="nav_right content_common">
                 <li class="services card">
-                    <img src="../assets/image/nav_right_icon01.svg" alt="">
+                    <img src="../assets/image/nav_right_icon01.svg" alt="digisalad icon">
                     <div class="nav_text">
                         <p>AREAS OF EXPERTISE</p>
                         <h3>SERVICES</h3>
@@ -77,29 +77,18 @@ export default {
 
 <style lang="scss" scoped>
 .nav_box{
-    // 
     display: flex;
     justify-content: center;
-
-    // width: 100vw;
-    // 
-    // width: 100%;
     height: 100vh;
     position: fixed;
     z-index: 50;
     .nav_content{
-        // 
         width: 100vw;
         gap: 4%;
         padding: 5%;
-        // 
-        // width: 100%;
-        // height: 100%;
-        // margin: auto;
         display: flex;
         justify-content: center;
         align-items: center;
-        // gap: 42px;
         &::after{
             content: '';
             position: absolute;
@@ -110,9 +99,6 @@ export default {
             opacity: 0.9;
             z-index: -10;
         }
-        // @include xl{
-        //     margin: 0 20px;
-        // }
         @include l{
             flex-direction: column;
         }
@@ -259,7 +245,6 @@ export default {
                     align-items: center;
                     justify-content: center;
                 }
-                
             }
             .careers{
                 justify-content: flex-end;
@@ -274,7 +259,6 @@ export default {
                     width: 30%;
                     height: auto;
                     justify-content: center;
-
                 }
             }
             .insights{

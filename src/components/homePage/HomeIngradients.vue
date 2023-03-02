@@ -9,7 +9,8 @@
             tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a
             dolor et, venenatis facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis. Aliquam consectetur,
             eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie
-            faucibus.</p>
+            faucibus.
+            </p>
             <!-- CTA -->
             <btn btn="OUR SERVICES" :style="{backgroundColor:'#585880'}"/>
         </div>

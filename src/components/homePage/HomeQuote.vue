@@ -10,7 +10,7 @@
                 </div>
                 <!-- 引文 -->
                 <div class="founder_words">
-                    <img src="../../assets/image/quote_decorate.svg" alt="">
+                    <img src="../../assets/image/quote_decorate.svg" alt="decorate dote">
                     <p>
                         A great digital work isn’t about designing beautiful pages purely. It is about context - how do we
                         deliver the <span>right experience to the right person at the right time</span>. The most important thing is that
@@ -163,7 +163,6 @@ export default {
                 }
             }
         }
-        
     }
 }
 </style>

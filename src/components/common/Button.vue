@@ -1,5 +1,5 @@
 <template>
-    <button>
+    <button data-aos="zoom-in" data-aos-duration="1100">
         {{btn}}
         <!-- 裝飾 -->
         <span></span>
@@ -44,6 +44,9 @@ button{
     @include s{
         padding: 15px 10px;
         font-size: 12px;
+    }
+    &:hover{
+        filter: brightness(95%) drop-shadow(1px 1px 5px #939393);
     }
 }
 </style>

@@ -24,7 +24,6 @@
 <script>
 import h2_text from '@/components/common/Title.vue'
 
-
 export default {
     name: 'HomeAward',
     components: {
@@ -122,38 +121,5 @@ export default {
             }
         }
     }
-
-    // .award_box {
-    //     width: 90%;
-    //     right: 0;
-    //     position: absolute;
-    //     background-color: white;
-    //     border-radius: 40px 0 40px 40px;
-    //     display: flex;
-    //     align-items: center;
-    //     // padding: 70px;
-    //     gap: 20%;
-    //     .award_intro{
-    //         // width: 60%;
-    //         display: flex;
-    //         flex-direction: column;
-    //         align-items: flex-start;
-    //         gap: 30px;
-    //         p{
-    //             font-size: 16px;
-    //             color: $text_black;
-    //             font-weight: 400;
-    //             letter-spacing: 1px;
-    //             line-height: 28px;
-    //             text-align: left;
-    //         }
-    //     }
-    //     .award_img{
-    //         display: flex;
-    //         flex-wrap: wrap;
-    //         box-sizing: border-box;
-    //         gap: 20px;
-    //     }
-    // }
 }
 </style>

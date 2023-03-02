@@ -14,7 +14,7 @@
                     <span>DIGITAL EXPERIENCES</span>
                 </h2>
             </div>
-            <img class="salad_img" src="../../assets/image/salad.gif" alt="DigiSalad Salad" @click="scrollTo()" id="salad">
+            <img id="salad" class="salad_img" src="../../assets/image/salad.gif" alt="DigiSalad Salad" @click="scrollTo()">
             <img class="fork" src="../../assets/image/fork.svg" alt="fork">
             <img class="knife" src="../../assets/image/knife.svg" alt="knife">
             <p @click="scrollTo()" class="banner_cta">TASTE US NOW!</p>
@@ -35,19 +35,10 @@ export default {
 
     },
     mounted(){
-        // const mouseHover=document.getElementById('salad');
-        // mouseHover.addEventListener('mouseover',this.hover)
+
     },
     computed: {
-        // hover(){
-        //     setTimeout(()=>{
-        //         let i=1;
-        //         for(let i=1;i<6;i++){
-        //             this.salad_img=i.toString();
-        //             console.log(i);
-        //             console.log(this.salad_img);
-        //         }
-        //     }),3000}
+        
     },
     methods: {
         scrollTo(){
@@ -56,7 +47,6 @@ export default {
                 behavior:"smooth"
             })
         },
-        
     }
 }
 
@@ -178,7 +168,6 @@ export default {
                 }
                 &:last-child>span{
                     @include s{
-                        // margin-top: -30px;
                         line-height: 40px;
                     }
                 }
@@ -218,11 +207,9 @@ export default {
                 }
             }
             &:hover~.fork{
-                // left: 47%;
                 animation: fork 1.5s ease infinite;
             }
             &:hover~.knife{
-                // left: 52%;
                 bottom: 12.5%;
                 animation: knife 1.5s ease infinite;
             }
@@ -236,10 +223,6 @@ export default {
             left: 47%;
             bottom: 13%;
             transform: scale(3);
-            // &:hover{
-            //     left: 47%;
-            //     animation: fork 1.5s ease infinite;
-            // }
             @include l{
                 left: 46%;
             }
@@ -253,11 +236,6 @@ export default {
             left: 52.5%;
             bottom: 13%;
             transform: scale(3);
-            // &:hover{
-            //     left: 52%;
-            //     bottom: 12.5%;
-            //     animation: knife 1.5s ease infinite;
-            // }
             @include l{
                 left: 53.5%;
             }
@@ -292,7 +270,6 @@ export default {
             &:hover{
                 text-shadow: 2px 2px 5px white;
             }
-            
         }
         &::after{
             content: '';
@@ -304,7 +281,6 @@ export default {
             height: 40px;
             background-color: white;
         }
-            
     }
 }
 </style>

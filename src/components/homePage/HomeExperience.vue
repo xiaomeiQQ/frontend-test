@@ -9,7 +9,7 @@
         eros et vulputate euismod, nunc leo tempor lacus, ac rhoncus neque eros nec lacus. Cras lobortis molestie
         faucibus.</p>
         <!-- 客戶 -->
-        <img src="../../assets/image/DigiSalad_Client_List.svg" alt="">
+        <img src="../../assets/image/DigiSalad_Client_List.svg" alt="DigiSalad customer">
     </section>
 </template>
 
@@ -62,7 +62,6 @@ export default {
         @include l{
             position: relative;
             padding-top: 380px;
-            // padding-top: 0;
             height: 750px;
             top: 0;
             gap: 30px;

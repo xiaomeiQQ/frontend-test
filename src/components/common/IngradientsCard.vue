@@ -82,7 +82,6 @@ export default {
             @include m{
                 font-size: 12px;
                 line-height: 16px;
-
             }
         }
         button{
@@ -95,6 +94,10 @@ export default {
             font-weight: 700;
             letter-spacing: 2.22px;
             background-color: transparent;
+            transition: all 0.2s ease-in-out;
+            &:hover{
+                background-color: $second_color;
+            }
             @include m{
                 padding: 8px 15px;
                 font-size: 12px;
@@ -102,6 +105,4 @@ export default {
         }
     }
 }
-
-
 </style>
