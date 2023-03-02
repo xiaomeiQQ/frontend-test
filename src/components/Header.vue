@@ -66,7 +66,7 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 60px;
+        padding: 0 50px;
         .nav_logo{
             z-index: 50;
             cursor: pointer;

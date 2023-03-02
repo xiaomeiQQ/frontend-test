@@ -112,6 +112,7 @@ export default {
                 animation: scale 1s linear;
                 @include s{
                     align-self: center;
+                    width: 50%;
                 }
             }
             @keyframes scale{
@@ -164,11 +165,12 @@ export default {
                 @include s{
                     font-size: 24px;
                     text-align: center;
+                    letter-spacing: 6px;
                     gap: 0;
                 }
                 &:last-child>span{
                     @include s{
-                        line-height: 40px;
+                        line-height: 35px;
                     }
                 }
             }
@@ -195,6 +197,12 @@ export default {
             transform: translate(-50%,-50%);
             animation: pulse 1.3s infinite;
             border-radius: 50%;
+            @include m{
+                width: 70px;
+            }
+            @include s{
+                width: 60px;
+            }
             @keyframes pulse {
                 0% {
                 box-shadow: 0 0 0 0 #FFEFDC;

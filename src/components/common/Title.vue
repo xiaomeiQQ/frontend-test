@@ -1,5 +1,5 @@
 <template>
-    <div class="title">
+    <div class="title" data-aos="fade-up" data-aos-duration="1100">
         <!-- 標題 -->
         <h2>{{text}}</h2>
         <!-- 裝飾 -->
